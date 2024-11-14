@@ -39,8 +39,6 @@ class CustomFeatureExtractor(BaseFeaturesExtractor):
     def forward(self, observations):
         return self.custom_mlp(observations)
 
-seed = 42
-set_random_seed(seed)
 
 # Set up the CartPole environment
 env = gym.make("CartPole-v1")
@@ -50,6 +48,8 @@ env = gym.make("CartPole-v1")
 # custom_env = CustomCartPoleReward(gym.make("CartPole-v1"))
 
 # Set up CartPole as a vectorized environment
+seed = 42
+set_random_seed(seed)
 vec_env = make_vec_env("CartPole-v1", seed=seed, n_envs=1)
 
 # Define and train the PPO model
