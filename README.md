@@ -3,6 +3,7 @@
 Group Members:
 - Michael Grajera
 - Chase Mortensen
+- Anthony Wilson
 
 ## Running the program
 
@@ -222,4 +223,107 @@ Here's the full output from one of the modified agent's runs:
 |    value_loss           | 51.7        |
 -----------------------------------------
 Average reward with custom reward function: 173.52622567371105
+```
+## Compare the baseline and custom nueral network architecture's performance. How did changing the architecture affect behavior?
+
+Average reward with custom nueral network architecture: 200.1
+
+The modle with a custom nueral network had a higher average reward.
+
+```
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 23.3     |
+|    ep_rew_mean     | 23.3     |
+| time/              |          |
+|    fps             | 1554     |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 2048     |
+---------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 27.2        |
+|    ep_rew_mean          | 27.2        |
+| time/                   |             |
+|    fps                  | 1070        |
+|    iterations           | 2           |
+|    time_elapsed         | 3           |
+|    total_timesteps      | 4096        |
+| train/                  |             |
+|    approx_kl            | 0.011969291 |
+|    clip_fraction        | 0.102       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.686      |
+|    explained_variance   | 0.0182      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 8.16        |
+|    n_updates            | 10          |
+|    policy_gradient_loss | -0.0176     |
+|    value_loss           | 51          |
+-----------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 37          |
+|    ep_rew_mean          | 37          |
+| time/                   |             |
+|    fps                  | 1076        |
+|    iterations           | 3           |
+|    time_elapsed         | 5           |
+|    total_timesteps      | 6144        |
+| train/                  |             |
+|    approx_kl            | 0.009763462 |
+|    clip_fraction        | 0.0549      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.663      |
+|    explained_variance   | 0.0606      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 12.5        |
+|    n_updates            | 20          |
+|    policy_gradient_loss | -0.0149     |
+|    value_loss           | 36.2        |
+-----------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 51.8        |
+|    ep_rew_mean          | 51.8        |
+| time/                   |             |
+|    fps                  | 1067        |
+|    iterations           | 4           |
+|    time_elapsed         | 7           |
+|    total_timesteps      | 8192        |
+| train/                  |             |
+|    approx_kl            | 0.008619969 |
+|    clip_fraction        | 0.0931      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.63       |
+|    explained_variance   | 0.195       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 21.8        |
+|    n_updates            | 30          |
+|    policy_gradient_loss | -0.0222     |
+|    value_loss           | 57.3        |
+-----------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 67.2        |
+|    ep_rew_mean          | 67.2        |
+| time/                   |             |
+|    fps                  | 1069        |
+|    iterations           | 5           |
+|    time_elapsed         | 9           |
+|    total_timesteps      | 10240       |
+| train/                  |             |
+|    approx_kl            | 0.007016697 |
+|    clip_fraction        | 0.0771      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.604      |
+|    explained_variance   | 0.269       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 17          |
+|    n_updates            | 40          |
+|    policy_gradient_loss | -0.0158     |
+|    value_loss           | 55.7        |
+-----------------------------------------
+Average reward with custom network architecture: 200.1
 ```
